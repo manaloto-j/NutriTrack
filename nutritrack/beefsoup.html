@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Detail — NutriTrack</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/beefsoup.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥗</text></svg>" />
+  <style>
+    /* ── Recipe Switcher Panel ── */
+    .recipe-switcher {
+      background: var(--bg-2);
+      border-bottom: 1px solid var(--glass-border);
+      padding: 0 40px;
+      position: sticky;
+      top: 70px;
+      z-index: 900;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .recipe-switcher::-webkit-scrollbar { display: none; }
+
+    .switcher-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 4px;
+      padding: 10px 0;
+    }
+
+    .switcher-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      padding: 10px 18px;
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--gray-2);
+      white-space: nowrap;
+      transition: all var(--transition);
+      flex-shrink: 0;
+    }
+
+    .switcher-btn:hover {
+      background: var(--glass);
+      border-color: var(--glass-border);
+      color: var(--white);
+    }
+
+    .switcher-btn.active {
+      background: var(--green-subtle);
+      border-color: rgba(0, 165, 83, 0.35);
+      color: var(--green);
+    }
+
+    .switcher-thumb {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .switcher-thumb-placeholder {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--gray-4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .recipe-switcher { padding: 0 12px; }
+      .switcher-btn { padding: 8px 14px; font-size: 0.8rem; }
+      .switcher-thumb, .switcher-thumb-placeholder { width: 28px; height: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="nav scrolled" id="nav">
+    <a href="index.html" class="nav-logo">Nutri<span>Track</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="beefsoup.html" class="active">Recipe Detail</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="burger" aria-label="Toggle menu">
+      <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="beefsoup.html">Recipe Detail</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ══════════════════════════════════
+       RECIPE SWITCHER
+  ══════════════════════════════════ -->
+  <div class="recipe-switcher">
+    <div class="switcher-inner">
+      <button class="switcher-btn" data-recipe="beef-soup">
+        <img class="switcher-thumb" src="images/beef-soup.png" alt="" />
+        Beef Meatball Soup
+      </button>
+      <button class="switcher-btn" data-recipe="chicken-salad">
+        <img class="switcher-thumb" src="images/chicken-salad.png" alt="" />
+        Grilled Chicken Salad
+      </button>
+      <button class="switcher-btn" data-recipe="salmon-pasta">
+        <img class="switcher-thumb" src="images/salmon-pasta.png" alt="" />
+        Salmon &amp; Noodles
+      </button>
+      <button class="switcher-btn" data-recipe="chicken-parmesan">
+        <img class="switcher-thumb" src="images/chicken-parmesan.png" alt="" />
+        Chicken Parmesan
+      </button>
+      <button class="switcher-btn" data-recipe="zucchini-bolognese">
+        <div class="switcher-thumb-placeholder">🥒</div>
+        Zucchini Bolognese
+      </button>
+      <button class="switcher-btn" data-recipe="thai-soup">
+        <div class="switcher-thumb-placeholder">🍜</div>
+        Thai Lemongrass Soup
+      </button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       RECIPE HERO (dynamic)
+  ══════════════════════════════════ -->
+  <div class="recipe-hero">
+    <div class="recipe-hero-img">
+      <img id="recipe-hero-img" src="" alt="" />
+    </div>
+    <div class="recipe-hero-overlay"></div>
+    <div class="recipe-hero-content">
+      <a href="recipes.html" style="display:inline-flex;align-items:center;gap:6px;color:var(--gray-2);font-size:0.85rem;margin-bottom:16px;transition:color 0.2s" onmouseover="this.style.color='var(--green)'" onmouseout="this.style.color='var(--gray-2)'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Back to Recipes
+      </a>
+      <div style="margin-bottom:14px">
+        <span id="recipe-tag" style="background:var(--green);color:white;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 14px;border-radius:50px;"></span>
+      </div>
+      <h1 id="recipe-title"></h1>
+      <div class="recipe-hero-meta" id="recipe-meta"></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       RECIPE LAYOUT
+  ══════════════════════════════════ -->
+  <div class="recipe-layout">
+
+    <!-- ── Main Content ── -->
+    <main>
+      <p class="recipe-description" id="recipe-description"></p>
+
+      <!-- Ingredients -->
+      <div class="ingredients-section">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+          </svg>
+          Ingredients
+        </h3>
+        <div class="ing-list" id="recipe-ingredients"></div>
+      </div>
+
+      <!-- Interactive SVG Stepper -->
+      <h3 class="stepper-header">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+        Step-by-Step Instructions
+      </h3>
+      <p style="color:var(--gray-2);font-size:0.88rem;margin-bottom:28px;">Click a step to jump to it. Steps glow green when active.</p>
+
+      <div class="stepper" id="recipe-stepper"></div>
+
+      <div style="margin-top:36px;display:flex;gap:12px;flex-wrap:wrap;">
+        <button id="next-step" class="btn btn-primary">
+          Next Step
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <a href="recipes.html" class="btn btn-outline">← More Recipes</a>
+      </div>
+    </main>
+
+    <!-- ── Sidebar ── -->
+    <aside class="nutrition-sidebar">
+      <div class="nutrition-card">
+        <h3>Adjust Servings</h3>
+        <div class="servings-control">
+          <span>Servings</span>
+          <div class="servings-counter">
+            <button class="serv-btn" data-action="dec">−</button>
+            <span class="serv-count">4</span>
+            <button class="serv-btn" data-action="inc">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="nutrition-card">
+        <h3>Nutrition Per Serving</h3>
+        <div class="nutrition-row n-highlight">
+          <span class="n-label">Calories</span>
+          <span class="n-val" data-nutrient="calories"></span>
+        </div>
+        <div class="nutrition-row">
+          <span class="n-label">Protein</span>
+          <span class="n-val" data-nutrient="protein"></span>
+        </div>
+        <div class="nutrition-row">
+          <span class="n-label">Total Fat</span>
+          <span class="n-val" data-nutrient="fat"></span>
+        </div>
+        <div class="nutrition-row">
+          <span class="n-label">Carbohydrates</span>
+          <span class="n-val" data-nutrient="carbs"></span>
+        </div>
+        <div class="nutrition-row">
+          <span class="n-label">Dietary Fiber</span>
+          <span class="n-val" data-nutrient="fiber"></span>
+        </div>
+      </div>
+      <div class="nutrition-card" id="tips-card">
+        <h3>Chef's Tips</h3>
+        <div id="recipe-tips" style="display:flex;flex-direction:column;gap:14px;margin-top:4px;"></div>
+      </div>
+      <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Contact Us
+      </a>
+    </aside>
+
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">Nutri<span>Track</span></div>
+          <p>Science-backed nutrition tracking for modern humans. Eat smarter, live better.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="X">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="#">Macro Tracker</a>
+          <a href="recipes.html">Recipe Library</a>
+          <a href="#">Meal Planner</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="#">Blog</a>
+          <a href="#">Nutrition Guides</a>
+          <a href="#">Community</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 NutriTrack. All rights reserved.</p>
+        <p>Made with ❤️ for healthier living</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/beefsoup.js"></script>
+</body>
+</html>

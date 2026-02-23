@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — NutriTrack</title>
+  <meta name="description" content="Get in touch with NutriTrack or share your favourite healthy recipe with our community." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥗</text></svg>" />
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="nav scrolled" id="nav">
+    <a href="index.html" class="nav-logo">Nutri<span>Track</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="beefsoup.html">Recipe Detail</a></li>
+      <li><a href="contact.html" class="active nav-cta">Contact</a></li>
+    </ul>
+    <button class="burger" aria-label="Toggle menu">
+      <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="beefsoup.html">Recipe Detail</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ── Hero ── -->
+  <div class="contact-hero reveal">
+    <span class="section-label">Get in Touch</span>
+    <h1>We'd love to <span style="color:var(--green)">hear</span> from you</h1>
+    <p>Have a question, feedback, or want to share your favourite healthy recipe? We're here for it.</p>
+  </div>
+
+  <!-- ══════════════════════════════════
+       CONTACT LAYOUT
+  ══════════════════════════════════ -->
+  <div class="contact-layout">
+
+    <!-- ── Send a Message (Glass Form) ── -->
+    <div class="reveal">
+      <form id="contact-form" novalidate>
+        <div class="glass-form-card">
+          <h2>Send a Message</h2>
+          <p>Our team typically responds within 24 hours on business days.</p>
+
+          <div class="form-fields">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" class="form-control" placeholder="Alex" required />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" class="form-control" placeholder="Johnson" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="alex@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" class="form-control" style="cursor:pointer;">
+                <option value="" disabled selected>Choose a topic...</option>
+                <option value="general">General Inquiry</option>
+                <option value="recipe">Recipe Question</option>
+                <option value="account">Account Support</option>
+                <option value="partnership">Partnership</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Tell us what's on your mind..." maxlength="500" rows="5" required></textarea>
+              <div style="text-align:right;margin-top:4px;">
+                <span class="char-count" style="font-size:0.75rem;color:var(--gray-3);">0/500</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              <span class="btn-text">Send Message</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+              <div class="spinner-circle"></div>
+            </button>
+          </div>
+
+          <!-- Success State -->
+          <div class="success-msg">
+            <div class="success-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 12l5 5L20 7"/>
+              </svg>
+            </div>
+            <h3>Message Sent!</h3>
+            <p>Thanks for reaching out. We'll get back to you within 24 hours.</p>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- ── Contact Info ── -->
+    <div class="contact-info reveal reveal-delay-2">
+      <div class="info-card">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+        <div class="info-text">
+          <h4>Phone Support</h4>
+          <p>Mon–Fri, 9am–6pm EST<br>+1 (800) NUTRI-TK</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div class="info-text">
+          <h4>Email Us</h4>
+          <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="640c0108080b240a1110160d101605070f4a070b09">[email&#160;protected]</a><br><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="22515752524d5056624c5756504b56504341490c414d4f">[email&#160;protected]</a></p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div class="info-text">
+          <h4>Our Office</h4>
+          <p>123 Wellness Ave, Suite 400<br>New York, NY 10001</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div class="info-text">
+          <h4>Response Time</h4>
+          <p>Average response within 4 hours<br>during business days.</p>
+        </div>
+      </div>
+
+      <!-- Social links -->
+      <div style="background:var(--bg-2);border:1px solid var(--glass-border);border-radius:var(--radius);padding:24px;">
+        <h4 style="font-family:var(--font-body);font-weight:600;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray-2);margin-bottom:16px;">Follow Us</h4>
+        <div class="footer-socials">
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end contact-layout -->
+
+  <!-- ══════════════════════════════════
+       SHARE YOUR RECIPE (Glass Form)
+  ══════════════════════════════════ -->
+  <section class="share-section">
+    <div class="reveal">
+      <span class="section-label">Community</span>
+      <h2>Share Your Recipe</h2>
+      <p>Have a healthy recipe the world needs to know about? Submit it here and we'll feature the best ones.</p>
+    </div>
+
+    <form id="share-form" novalidate>
+      <div class="share-form-card reveal">
+        <div class="share-fields">
+          <div class="form-row" style="margin-bottom:20px;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="recipe-name">Recipe Name</label>
+              <input type="text" id="recipe-name" name="recipe_name" class="form-control" placeholder="e.g. Spicy Tuna Rice Bowl" required />
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="recipe-category">Category</label>
+              <select id="recipe-category" name="category" class="form-control" style="cursor:pointer;">
+                <option value="" disabled selected>Select category</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="snack">Snack</option>
+                <option value="dessert">Healthy Dessert</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row" style="margin-bottom:20px;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="prep-time">Prep Time (mins)</label>
+              <input type="number" id="prep-time" name="prep_time" class="form-control" placeholder="15" min="1" max="999" />
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="cook-time">Cook Time (mins)</label>
+              <input type="number" id="cook-time" name="cook_time" class="form-control" placeholder="30" min="1" max="999" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Macros Per Serving</label>
+            <div class="macro-inputs">
+              <div style="position:relative;">
+                <input type="number" name="calories" class="form-control" placeholder="Calories" style="padding-right:50px;" />
+                <span style="position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:0.75rem;color:var(--gray-3);">kcal</span>
+              </div>
+              <div style="position:relative;">
+                <input type="number" name="protein" class="form-control" placeholder="Protein" style="padding-right:30px;" />
+                <span style="position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:0.75rem;color:var(--gray-3);">g</span>
+              </div>
+              <div style="position:relative;">
+                <input type="number" name="fats" class="form-control" placeholder="Fats" style="padding-right:30px;" />
+                <span style="position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:0.75rem;color:var(--gray-3);">g</span>
+              </div>
+              <div style="position:relative;">
+                <input type="number" name="carbs" class="form-control" placeholder="Carbs" style="padding-right:30px;" />
+                <span style="position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:0.75rem;color:var(--gray-3);">g</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="ingredients-list">Ingredients</label>
+            <textarea id="ingredients-list" name="ingredients" class="form-control" placeholder="List each ingredient on a new line&#10;e.g.&#10;200g chicken breast&#10;1 cup quinoa&#10;2 tbsp olive oil" rows="5"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="instructions">Instructions</label>
+            <textarea id="instructions" name="instructions" class="form-control" placeholder="Describe the steps to prepare your recipe..." rows="6"></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="author-name">Your Name</label>
+              <input type="text" id="author-name" name="author" class="form-control" placeholder="Your name or username" />
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="author-email">Your Email</label>
+              <input type="email" id="author-email" name="author_email" class="form-control" placeholder="For notification when featured" />
+            </div>
+          </div>
+
+          <div style="margin-top:8px;margin-bottom:24px;">
+            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:0.88rem;color:var(--gray-2);">
+              <input type="checkbox" style="accent-color:var(--green);width:16px;height:16px;" />
+              I confirm this recipe is my own creation and I agree to the community guidelines.
+            </label>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <span class="btn-text">Submit Recipe</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+            <div class="spinner-circle"></div>
+          </button>
+        </div>
+
+        <!-- Success State -->
+        <div class="success-msg">
+          <div class="success-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 12l5 5L20 7"/>
+            </svg>
+          </div>
+          <h3>Recipe Submitted!</h3>
+          <p>Amazing! Our team will review your recipe and may feature it on NutriTrack. We'll notify you by email.</p>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">Nutri<span>Track</span></div>
+          <p>Science-backed nutrition tracking for modern humans. Eat smarter, live better.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="X">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="#">Macro Tracker</a>
+          <a href="recipes.html">Recipe Library</a>
+          <a href="#">Meal Planner</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="#">Blog</a>
+          <a href="#">Nutrition Guides</a>
+          <a href="#">Community</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+ 

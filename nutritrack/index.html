@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NutriTrack — Nourish You</title>
+  <meta name="description" content="NutriTrack is your smart nutrition platform for tracking meals, macros, and building healthy habits." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥗</text></svg>" />
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">Nutri<span>Track</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="beefsoup.html">Recipe Detail</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="burger" aria-label="Toggle menu">
+      <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="beefsoup.html">Recipe Detail</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="images/food-on-blackboard.png" alt="Nourishing food" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+        </svg>
+        Trusted by 50,000+ users
+      </div>
+      <h1 class="hero-title">Nourish<br><span class="accent">You</span></h1>
+      <p class="hero-sub">
+        Track macros, discover high-protein recipes, and fuel your body with science-backed nutrition intelligence — all in one place.
+      </p>
+      <div class="hero-actions">
+        <a href="recipes.html" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+          </svg>
+          Browse Recipes
+        </a>
+        <a href="#features" class="btn btn-outline">
+          Learn More
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+      Scroll
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       STATS
+  ══════════════════════════════════ -->
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="50000" data-suffix="+">0</div>
+        <div class="stat-label">Active Users</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-number" data-target="1200" data-suffix="+">0</div>
+        <div class="stat-label">Tracked Recipes</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-number" data-target="98" data-suffix="%">0</div>
+        <div class="stat-label">User Satisfaction</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-number" data-target="4" data-suffix="M+">0</div>
+        <div class="stat-label">Meals Logged</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       FEATURES
+  ══════════════════════════════════ -->
+  <section class="section" id="features">
+    <div class="features-header reveal">
+      <span class="section-label">Why NutriTrack</span>
+      <h2>Everything you need to<br>eat smarter</h2>
+      <p>From macro tracking to personalized recipes — NutriTrack puts your nutrition on autopilot.</p>
+    </div>
+    <div class="features-grid">
+      <!-- Card 1 -->
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <!-- Lightning bolt - Energy -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+        </div>
+        <h3>Smart Macro Tracking</h3>
+        <p>Log meals in seconds with our AI-powered food recognition. Get real-time breakdowns of calories, protein, fats, and carbs.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="feature-card reveal reveal-delay-1">
+        <div class="feature-icon">
+          <!-- Wheat / Recipe -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 20V10"/><path d="M12 10C12 10 8.5 7 7 4c3 0 5 2 5 6"/><path d="M12 10c0 0 3.5-3 5-6-3 0-5 2-5 6"/>
+            <path d="M12 20c-3 0-6-1-6-4 1.5 0 3 .5 4 2"/><path d="M12 20c3 0 6-1 6-4-1.5 0-3 .5-4 2"/>
+          </svg>
+        </div>
+        <h3>1,200+ Healthy Recipes</h3>
+        <p>Discover chef-crafted, nutritionist-approved recipes tailored to your goals — from high-protein meals to low-carb dinners.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-icon">
+          <!-- Target / Goals -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+          </svg>
+        </div>
+        <h3>Personalized Goals</h3>
+        <p>Set custom targets for weight loss, muscle gain, or maintenance. Our algorithm adjusts your daily targets automatically.</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <!-- Droplet - Hydration -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L5.5 9.5a6.5 6.5 0 1 0 13 0L12 2z"/>
+          </svg>
+        </div>
+        <h3>Hydration Reminders</h3>
+        <p>Stay on top of your water intake with smart reminders. Track daily hydration alongside your nutrition dashboard.</p>
+      </div>
+      <!-- Card 5 -->
+      <div class="feature-card reveal reveal-delay-1">
+        <div class="feature-icon">
+          <!-- Chart / Progress -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <h3>Progress Analytics</h3>
+        <p>Visualize your health journey with beautiful charts. Track weight, energy levels, and nutrition trends over time.</p>
+      </div>
+      <!-- Card 6 -->
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-icon">
+          <!-- Community -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>Community Sharing</h3>
+        <p>Share your favorite recipes and meal plans with a thriving community of health-conscious food lovers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       COMPARISON TABLE
+  ══════════════════════════════════ -->
+  <section class="section">
+    <div class="reveal">
+      <span class="section-label">Compare</span>
+      <h2 style="font-size:clamp(1.8rem,3vw,2.4rem); margin-bottom:36px;">NutriTrack vs. the rest</h2>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th class="highlight">NutriTrack</th>
+            <th>Basic Apps</th>
+            <th>Others</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AI Macro Recognition</td>
+            <td>
+              <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="#00a553" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 12l5 5L20 7"/>
+              </svg>
+            </td>
+            <td><span class="cross-icon">—</span></td>
+            <td><span class="cross-icon">—</span></td>
+          </tr>
+          <tr>
+            <td>1,200+ Tracked Recipes</td>
+            <td>
+              <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="#00a553" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 12l5 5L20 7"/>
+              </svg>
+            </td>
+            <td>
+              <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="#00a553" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 12l5 5L20 7"/>
+              </svg>
+            </td>
+            <td><span class="cross-icon">—</span></td>
+          </tr>
+          <tr>
+            <td>Personalized Goal Engine</td>
+            <td>
+              <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="#00a553" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 12l5 5L20 7"/>
+              </svg>
+            </td>
+            <td><span class="cross-icon">—</span></td>
+            <td>
+              <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="#00a553" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 12l5 5L20 7"/>
+              </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>Community Recipe Sharing</td>
+            <td>
+              <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="#00a553" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 12l5 5L20 7"/>
+              </svg>
+            </td>
+            <td><span class="cross-icon">—</span></td>
+            <td>
+              <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="#00a553" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 12l5 5L20 7"/>
+              </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>Hydration & Sleep Tracking</td>
+            <td>
+              <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="#00a553" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 12l5 5L20 7"/>
+              </svg>
+            </td>
+            <td><span class="cross-icon">—</span></td>
+            <td><span class="cross-icon">—</span></td>
+          </tr>
+          <tr>
+            <td>Free Tier Available</td>
+            <td>
+              <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="#00a553" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 12l5 5L20 7"/>
+              </svg>
+            </td>
+            <td>
+              <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="#00a553" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 12l5 5L20 7"/>
+              </svg>
+            </td>
+            <td>
+              <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="#00a553" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 12l5 5L20 7"/>
+              </svg>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       MACROS SECTION
+  ══════════════════════════════════ -->
+  <section class="section">
+    <div class="macros-layout">
+      <!-- Visual -->
+      <div class="macros-visual reveal">
+        <div class="macros-plate">
+          <img data-src="images/chicken-salad.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Healthy chicken salad" loading="lazy" />
+        </div>
+        <div class="macros-badge top-right">
+          <div class="badge-icon" style="background:rgba(255,183,0,0.12);">
+            <!-- Lightning -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="#FFB700" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <div>
+            <div class="badge-val">320</div>
+            <div class="badge-lbl">kcal / serving</div>
+          </div>
+        </div>
+        <div class="macros-badge bottom-left">
+          <div class="badge-icon" style="background:rgba(0,165,83,0.12);">
+            <!-- Flexed arm / Protein -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="#00a553" stroke-width="2">
+              <path d="M12 2a4 4 0 0 1 4 4c0 1.5-.7 2.8-1.8 3.6L16 20H8l1.8-10.4A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="badge-val">42g</div>
+            <div class="badge-lbl">Protein</div>
+          </div>
+        </div>
+      </div>
+      <!-- Info -->
+      <div class="reveal reveal-delay-2">
+        <span class="section-label">Macro Intelligence</span>
+        <h2 style="font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom:16px;">Every nutrient,<br>accounted for</h2>
+        <p style="color:var(--gray-2);line-height:1.8;margin-bottom:30px;font-size:0.95rem;">
+          NutriTrack breaks down every meal into its core macronutrients, giving you a clear picture of what you're fueling your body with.
+        </p>
+        <div class="macro-list">
+          <!-- Energy -->
+          <div class="macro-item">
+            <div class="macro-icon-wrap" style="background:rgba(255,183,0,0.1);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#FFB700" stroke-width="2" width="24" height="24">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <div class="macro-info">
+              <h4>Energy</h4>
+              <div class="macro-bar-wrap">
+                <div class="macro-bar" data-width="72%" style="background:#FFB700;"></div>
+              </div>
+            </div>
+            <span class="macro-value">320 kcal</span>
+          </div>
+          <!-- Protein -->
+          <div class="macro-item">
+            <div class="macro-icon-wrap" style="background:rgba(0,165,83,0.1);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#00a553" stroke-width="2" width="24" height="24">
+                <path d="M12 2a4 4 0 0 1 4 4c0 1.5-.7 2.8-1.8 3.6L16 20H8l1.8-10.4A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/>
+              </svg>
+            </div>
+            <div class="macro-info">
+              <h4>Protein</h4>
+              <div class="macro-bar-wrap">
+                <div class="macro-bar" data-width="84%" style="background:#00a553;"></div>
+              </div>
+            </div>
+            <span class="macro-value">42g</span>
+          </div>
+          <!-- Fats -->
+          <div class="macro-item">
+            <div class="macro-icon-wrap" style="background:rgba(255,88,88,0.1);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#FF5858" stroke-width="2" width="24" height="24">
+                <path d="M12 2L5.5 9.5a6.5 6.5 0 1 0 13 0L12 2z"/>
+              </svg>
+            </div>
+            <div class="macro-info">
+              <h4>Fats</h4>
+              <div class="macro-bar-wrap">
+                <div class="macro-bar" data-width="30%" style="background:#FF5858;"></div>
+              </div>
+            </div>
+            <span class="macro-value">9g</span>
+          </div>
+          <!-- Carbs -->
+          <div class="macro-item">
+            <div class="macro-icon-wrap" style="background:rgba(99,153,255,0.1);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#6399FF" stroke-width="2" width="24" height="24">
+                <path d="M12 20V10"/><path d="M12 10C12 10 8.5 7 7 4c3 0 5 2 5 6"/>
+                <path d="M12 10c0 0 3.5-3 5-6-3 0-5 2-5 6"/>
+              </svg>
+            </div>
+            <div class="macro-info">
+              <h4>Carbs</h4>
+              <div class="macro-bar-wrap">
+                <div class="macro-bar" data-width="55%" style="background:#6399FF;"></div>
+              </div>
+            </div>
+            <span class="macro-value">28g</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       INGREDIENTS / SVG ICONS
+  ══════════════════════════════════ -->
+  <section class="section">
+    <div class="ingredients-header">
+      <div class="reveal">
+        <span class="section-label">Star Ingredients</span>
+        <h2>Fuel your recipes<br>with the best</h2>
+      </div>
+      <a href="recipes.html" class="btn btn-outline reveal">View All Recipes →</a>
+    </div>
+    <div class="ingredients-grid">
+      <!-- Chicken - custom SVG -->
+      <div class="ingredient-card reveal">
+        <div class="ingredient-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 20C50 20 62 16 68 24C74 32 70 44 62 48C58 50 54 50 50 48L30 58C26 60 20 58 18 52C16 46 20 40 26 38L42 30C44 26 50 20 50 20Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M26 38C24 34 24 28 28 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="64" cy="26" r="3" fill="currentColor" opacity="0.4"/>
+          </svg>
+        </div>
+        <h4>Chicken Breast</h4>
+        <p>High protein, low fat</p>
+      </div>
+      <!-- Cheese - custom SVG -->
+      <div class="ingredient-card reveal reveal-delay-1">
+        <div class="ingredient-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 52L30 28L68 34L64 60H16L12 52Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="40" cy="42" r="4" stroke="currentColor" stroke-width="2"/>
+            <circle cx="55" cy="48" r="3" stroke="currentColor" stroke-width="2"/>
+            <circle cx="30" cy="50" r="3.5" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <h4>Cheese</h4>
+        <p>Calcium & healthy fats</p>
+      </div>
+      <!-- Salmon -->
+      <div class="ingredient-card reveal reveal-delay-2">
+        <div class="ingredient-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 42C14 32 24 22 40 20C56 18 66 28 70 38C66 50 56 58 40 58C24 58 14 52 10 42Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M70 38L76 30M70 38L76 46" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="25" cy="36" r="3" fill="currentColor" opacity="0.5"/>
+            <path d="M30 48C36 44 44 44 50 48" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h4>Salmon</h4>
+        <p>Omega-3 rich protein</p>
+      </div>
+      <!-- Veggies -->
+      <div class="ingredient-card reveal reveal-delay-3">
+        <div class="ingredient-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 12V62" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M40 28C40 28 28 24 22 16C28 14 36 18 40 28Z" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="2"/>
+            <path d="M40 28C40 28 52 24 58 16C52 14 44 18 40 28Z" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="2"/>
+            <path d="M40 44C40 44 30 38 26 28C32 26 38 32 40 44Z" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="2"/>
+            <path d="M40 44C40 44 50 38 54 28C48 26 42 32 40 44Z" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <h4>Fresh Greens</h4>
+        <p>Vitamins & fiber</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       CTA
+  ══════════════════════════════════ -->
+  <section class="section">
+    <div class="cta-section reveal">
+      <h2>Ready to transform<br>your nutrition?</h2>
+      <p>Join over 50,000 users already building healthier habits with NutriTrack.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="recipes.html" class="btn btn-primary">
+          Start for Free
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">Nutri<span>Track</span></div>
+          <p>Science-backed nutrition tracking for modern humans. Eat smarter, live better.</p>
+          <div class="footer-socials">
+            <!-- Facebook -->
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <!-- Instagram -->
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <!-- X / Twitter -->
+            <a href="#" class="social-icon" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="#">Macro Tracker</a>
+          <a href="#">Recipe Library</a>
+          <a href="#">Meal Planner</a>
+          <a href="#">Progress Charts</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="#">Blog</a>
+          <a href="#">Nutrition Guides</a>
+          <a href="#">API Docs</a>
+          <a href="#">Community</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 NutriTrack. All rights reserved.</p>
+        <p>Made with ❤️ for healthier living</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/home.js"></script>
+</body>
+</html>

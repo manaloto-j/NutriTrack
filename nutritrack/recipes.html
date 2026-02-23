@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipes — NutriTrack</title>
+  <meta name="description" content="Browse 1,200+ high-protein, nutritionist-approved recipes on NutriTrack." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/recipes.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥗</text></svg>" />
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="nav scrolled" id="nav">
+    <a href="index.html" class="nav-logo">Nutri<span>Track</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="recipes.html" class="active">Recipes</a></li>
+      <li><a href="beefsoup.html">Recipe Detail</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="burger" aria-label="Toggle menu">
+      <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="beefsoup.html">Recipe Detail</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ── Page Header ── -->
+  <div class="page-hero">
+    <span class="section-label">Our Collection</span>
+    <h1>Recipes that <span style="color:var(--green)">fuel</span> you</h1>
+    <p>High-protein, nutritionist-approved meals for every goal — from rapid fat loss to serious muscle gains.</p>
+  </div>
+
+  <!-- ── Featured Recipe — Chicken Parmesan ── -->
+  <div class="featured-wrap reveal">
+    <div class="featured-card">
+      <div class="featured-img">
+        <img data-src="images/chicken-parmesan.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="High Protein Chicken Parmesan" loading="lazy" />
+      </div>
+      <div class="featured-overlay"></div>
+      <div class="featured-content">
+        <div class="featured-tag">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          Featured Recipe
+        </div>
+        <h2>High Protein Chicken Parmesan</h2>
+        <div class="featured-meta">
+          <span class="meta-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            35 min
+          </span>
+          <span class="meta-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            480 kcal
+          </span>
+          <span class="meta-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4c0 1.5-.7 2.8-1.8 3.6L16 20H8l1.8-10.4A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/></svg>
+            52g Protein
+          </span>
+          <span class="meta-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            Serves 4
+          </span>
+        </div>
+        <a href="beefsoup.html?recipe=chicken-parmesan" class="btn btn-primary">
+          View Full Recipe
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Recipe Grid ── -->
+  <section class="recipes-section">
+    <div class="recipes-header">
+      <h2>All Recipes</h2>
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="high-protein">High Protein</button>
+        <button class="filter-tab" data-filter="low-carb">Low Carb</button>
+        <button class="filter-tab" data-filter="soup">Soups</button>
+      </div>
+    </div>
+
+    <div class="recipes-grid">
+
+      <!-- Chicken Salad -->
+      <div class="recipe-card reveal" data-categories="high-protein,low-carb">
+        <div class="recipe-card-img">
+          <img data-src="images/chicken-salad.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Grilled Chicken Salad" loading="lazy" />
+          <span class="recipe-badge">High Protein</span>
+        </div>
+        <div class="recipe-card-body">
+          <h3>Grilled Chicken Salad</h3>
+          <p>Tender grilled chicken over crisp greens, cherry tomatoes, and a lemon herb dressing.</p>
+          <div class="recipe-card-footer">
+            <div class="recipe-stats">
+              <span class="rstat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                20 min
+              </span>
+              <span class="rstat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                285 kcal
+              </span>
+              <span class="rstat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4c0 1.5-.7 2.8-1.8 3.6L16 20H8l1.8-10.4A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/></svg>
+                38g P
+              </span>
+            </div>
+            <a href="beefsoup.html?recipe=chicken-salad" class="btn-sm">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Salmon Pasta -->
+      <div class="recipe-card reveal reveal-delay-1" data-categories="high-protein">
+        <div class="recipe-card-img">
+          <img data-src="images/salmon-pasta.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Grilled Salmon with Noodles" loading="lazy" />
+          <span class="recipe-badge">Omega-3 Rich</span>
+        </div>
+        <div class="recipe-card-body">
+          <h3>Grilled Salmon with Asian Noodles</h3>
+          <p>Perfectly seared salmon fillet on a bed of stir-fried noodles with fresh chives and vegetables.</p>
+          <div class="recipe-card-footer">
+            <div class="recipe-stats">
+              <span class="rstat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                25 min
+              </span>
+              <span class="rstat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                420 kcal
+              </span>
+              <span class="rstat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4c0 1.5-.7 2.8-1.8 3.6L16 20H8l1.8-10.4A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/></svg>
+                35g P
+              </span>
+            </div>
+            <a href="beefsoup.html?recipe=salmon-pasta" class="btn-sm">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beef Soup -->
+      <div class="recipe-card reveal reveal-delay-2" data-categories="soup,high-protein">
+        <div class="recipe-card-img">
+          <img data-src="images/beef-soup.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Hearty Beef Meatball Soup" loading="lazy" />
+          <span class="recipe-badge">Comfort Food</span>
+        </div>
+        <div class="recipe-card-body">
+          <h3>Hearty Beef Meatball Soup</h3>
+          <p>Rich tomato broth loaded with tender beef meatballs, seasonal vegetables, and aromatic herbs.</p>
+          <div class="recipe-card-footer">
+            <div class="recipe-stats">
+              <span class="rstat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                45 min
+              </span>
+              <span class="rstat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                320 kcal
+              </span>
+              <span class="rstat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4c0 1.5-.7 2.8-1.8 3.6L16 20H8l1.8-10.4A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/></svg>
+                28g P
+              </span>
+            </div>
+            <a href="beefsoup.html?recipe=beef-soup" class="btn-sm">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chicken Parmesan -->
+      <div class="recipe-card reveal" data-categories="high-protein">
+        <div class="recipe-card-img">
+          <img data-src="images/chicken-parmesan.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Chicken Parmesan" loading="lazy" />
+          <span class="recipe-badge">Editor's Pick</span>
+        </div>
+        <div class="recipe-card-body">
+          <h3>Classic Chicken Parmesan</h3>
+          <p>Crispy breaded chicken breast smothered in marinara and melted mozzarella — high-protein comfort food.</p>
+          <div class="recipe-card-footer">
+            <div class="recipe-stats">
+              <span class="rstat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                35 min
+              </span>
+              <span class="rstat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                480 kcal
+              </span>
+              <span class="rstat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4c0 1.5-.7 2.8-1.8 3.6L16 20H8l1.8-10.4A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/></svg>
+                52g P
+              </span>
+            </div>
+            <a href="beefsoup.html?recipe=chicken-parmesan" class="btn-sm">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zucchini Noodle Bolognese -->
+      <div class="recipe-card reveal reveal-delay-1" data-categories="low-carb">
+        <div class="recipe-card-img" style="background:linear-gradient(135deg,#0d2b1f,#0a1a14);display:flex;align-items:center;justify-content:center;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(0,165,83,0.3)" stroke-width="1.5">
+            <path d="M12 2L5.5 9.5a6.5 6.5 0 1 0 13 0L12 2z"/>
+          </svg>
+          <span class="recipe-badge">Low Carb</span>
+        </div>
+        <div class="recipe-card-body">
+          <h3>Zucchini Noodle Bolognese</h3>
+          <p>Classic Italian meat sauce served over spiralized zucchini noodles for a low-carb twist.</p>
+          <div class="recipe-card-footer">
+            <div class="recipe-stats">
+              <span class="rstat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                30 min
+              </span>
+              <span class="rstat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                310 kcal
+              </span>
+              <span class="rstat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4c0 1.5-.7 2.8-1.8 3.6L16 20H8l1.8-10.4A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/></svg>
+                30g P
+              </span>
+            </div>
+            <a href="beefsoup.html?recipe=zucchini-bolognese" class="btn-sm">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thai Lemongrass Soup -->
+      <div class="recipe-card reveal reveal-delay-2" data-categories="soup">
+        <div class="recipe-card-img" style="background:linear-gradient(135deg,#1a150d,#120e07);display:flex;align-items:center;justify-content:center;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,183,0,0.3)" stroke-width="1.5">
+            <path d="M12 20V10"/><path d="M12 10C12 10 8.5 7 7 4c3 0 5 2 5 6"/><path d="M12 10c0 0 3.5-3 5-6-3 0-5 2-5 6"/>
+          </svg>
+          <span class="recipe-badge">Warming</span>
+        </div>
+        <div class="recipe-card-body">
+          <h3>Thai Lemongrass Soup</h3>
+          <p>Aromatic lemongrass broth with tender chicken, mushrooms, and a hint of coconut milk.</p>
+          <div class="recipe-card-footer">
+            <div class="recipe-stats">
+              <span class="rstat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                40 min
+              </span>
+              <span class="rstat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                265 kcal
+              </span>
+              <span class="rstat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4c0 1.5-.7 2.8-1.8 3.6L16 20H8l1.8-10.4A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/></svg>
+                22g P
+              </span>
+            </div>
+            <a href="beefsoup.html?recipe=thai-soup" class="btn-sm">View →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">Nutri<span>Track</span></div>
+          <p>Science-backed nutrition tracking for modern humans. Eat smarter, live better.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="X">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="#">Macro Tracker</a>
+          <a href="recipes.html">Recipe Library</a>
+          <a href="#">Meal Planner</a>
+          <a href="#">Progress Charts</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="#">Blog</a>
+          <a href="#">Nutrition Guides</a>
+          <a href="#">API Docs</a>
+          <a href="#">Community</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 NutriTrack. All rights reserved.</p>
+        <p>Made with ❤️ for healthier living</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/recipes.js"></script>
+</body>
+</html>
