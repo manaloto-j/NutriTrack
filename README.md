@@ -4,7 +4,7 @@ A dark-themed, multi-page nutrition and recipe platform built with vanilla HTML,
 
 > **Created by Johnzelle Manaloto** — This is a revised and significantly improved version of a past project, rebuilt with a sharper design system, SVG iconography, interactive components, and a proper multi-file architecture.
 
-🔗 **Live Demo:** [https://your-live-demo-link-here.com](#) ← *replace this*
+🔗 **Live Demo:** [[https://your-live-demo-link-here.com](https://raw.githack.com/manaloto-j/NutriTrack/refs/heads/main/nutritrack/index.html)](#) ← *replace this*
 
 ---
 
